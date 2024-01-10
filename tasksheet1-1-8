@@ -1,0 +1,30 @@
+public class Main {
+    public static int varArgsSum(int... args) {
+
+        int totalSum = 0;
+
+        for (int arg : args) {
+
+            int cumSum = 0;
+
+            for (int i = 1; i <= arg; i++) {
+
+                cumSum += i;
+            }
+            // Print the argument and its cumulative sum
+            System.out.println(arg + " = " + cumSum);
+            // Add the cumulative sum to the total sum
+            totalSum += cumSum;
+        }
+        // Return the total sum
+        return totalSum;
+    }
+
+    // A main method to test the varArgsSum method
+    public static void main(String[] args) {
+        // Call the varArgsSum method with some sample arguments
+        int result = varArgsSum(4, 5, 10);
+        // Print the result
+        System.out.println("The total sum is " + result);
+    }
+}
